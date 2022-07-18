@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
-import Card from './Card';
-import api from '../utils/Api';
-import avatarDefault from'../images/сousteau-min.jpg';
+import { useState, useEffect } from "react";
+import Card from "./Card";
+import api from "../utils/Api";
+import avatarDefault from "../images/сousteau-min.jpg";
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
-  const [userName, setUserName] = useState('Жак-Ив Кусто');
-  const [userDescription, setUserDescription] = useState('Исследователь океана');
+  const [userName, setUserName] = useState("Жак-Ив Кусто");
+  const [userDescription, setUserDescription] = useState(
+    "Исследователь океана"
+  );
   const [userAvatar, setUserAvatar] = useState(avatarDefault);
   const [cards, setCards] = useState([]);
 
@@ -32,7 +34,6 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
         console.log(err);
       });
   }, []);
-
 
   return (
     <main className="main">
