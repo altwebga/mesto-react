@@ -131,18 +131,18 @@ function App() {
         <span className="popup__text-error photo-input-error"></span>
       </PopupWithForm>
 
-      <PopupWithForm
-        name="delete"
-        title="Вы уверены?"
-        buttonText="Да"
-      ></PopupWithForm>
-
       <ImagePopup
         card={selectedCard}
         onClose={closeAllPopups}
         isOpen={isImgPopupOpen}
         onCardClick={handleCardClick}
       />
+
+      <PopupWithForm
+        name="delete"
+        title="Вы уверены?"
+        buttonText="Да"
+      ></PopupWithForm>
     </div>
   );
 }
