@@ -1,13 +1,13 @@
-const popups = document.querySelectorAll(".popup"),
-  popupImage = document.querySelector(".popup_img"),
-  popupCards = document.querySelector(".popup_edit_card"),
-  formAddCards = popupCards.querySelector(".popup__form_add_card"),
-  titleInput = formAddCards.querySelector(".popup__text_value_title"),
-  linkInput = formAddCards.querySelector(".popup__text_value_link"),
-  popupProfile = document.querySelector(".popup_edit_profile"),
-  formElement = popupProfile.querySelector(".popup__form_edit_profile"),
-  nameInput = formElement.querySelector(".popup__text_value_name"),
-  descriptionInput = formElement.querySelector(".popup__text_value_descr");
+const popups = document.querySelectorAll(".popup")
+const popupImage = document.querySelector(".popup_img")
+const popupCards = document.querySelector(".popup_edit_card")
+const formAddCards = popupCards.querySelector(".popup__form_add_card")
+const titleInput = formAddCards.querySelector(".popup__text_value_title")
+const linkInput = formAddCards.querySelector(".popup__text_value_link")
+const popupProfile = document.querySelector(".popup_edit_profile")
+const formElement = popupProfile.querySelector(".popup__form_edit_profile")
+const nameInput = formElement.querySelector(".popup__text_value_name")
+const descriptionInput = formElement.querySelector(".popup__text_value_descr")
 
 const validatorSettings = {
   inputSelector: ".popup__text",
