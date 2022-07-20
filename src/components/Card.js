@@ -1,4 +1,7 @@
 function Card({ card, onCardClick }) {
+	function handleCardClick() {
+		onCardClick({ name: card.name, link: card.link }); 
+}
   return (
     <div className="card__place">
       <button
@@ -9,9 +12,7 @@ function Card({ card, onCardClick }) {
         className="card__img"
         src={card.link}
         alt={card.name}
-        onClick={() => {
-          onCardClick({ name: card.name, link: card.link });
-        }}
+        onClick={handleCardClick}
       />
       <div className="card__text">
         <h3 className="card__name">{card.name}</h3>

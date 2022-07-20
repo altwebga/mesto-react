@@ -39,6 +39,7 @@ function App() {
     setIsImgPopupOpen(false);
   }
 
+
   return (
     <div className="page">
       <div className="content">
