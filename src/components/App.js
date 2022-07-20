@@ -41,108 +41,110 @@ function App() {
 
   return (
     <div className="page">
-      <Header />
-      <Main
-        onEditAvatar={handleEditAvatarClick}
-        onEditProfile={handleEditProfileClick}
-        onAddPlace={handleAddPlaceClick}
-        onCardClick={handleCardClick}
-      />
-      <Footer />
-
-      <PopupWithForm
-        name="edit_profile"
-        title="Редактировать профиль"
-        buttonText="Сохранить"
-        onEditProfile={handleEditProfileClick}
-        isOpen={isEditProfilePopupOpen}
-        onClose={closeAllPopups}
-      >
-        <input
-          required
-          minLength="2"
-          maxLength="40"
-          id="name-input"
-          placeholder="Ваше имя"
-          type="text"
-          name="name"
-          className="popup__text popup__text_value_name"
+      <div className="content">
+        <Header />
+        <Main
+          onEditAvatar={handleEditAvatarClick}
+          onEditProfile={handleEditProfileClick}
+          onAddPlace={handleAddPlaceClick}
+          onCardClick={handleCardClick}
         />
-        <span className="popup__text-error name-input-error"></span>
-        <input
-          required
-          minLength="2"
-          maxLength="200"
-          id="job-input"
-          placeholder="Ваша профессия"
-          type="text"
-          name="descr"
-          className="popup__text popup__text_value_descr"
-        />
-        <span className="popup__text-error job-input-error"></span>
-      </PopupWithForm>
+        <Footer />
 
-      <PopupWithForm
-        name="edit_cards"
-        title="Новое место"
-        buttonText="Создать"
-        onAddPlace={handleAddPlaceClick}
-        isOpen={isAddPlacePopupOpen}
-        onClose={closeAllPopups}
-      >
-        <input
-          required
-          minLength="2"
-          maxLength="30"
-          id="card-input"
-          placeholder="Название места"
-          type="text"
-          name="name"
-          className="popup__text popup__text_value_title"
-        />
-        <span className="popup__text-error card-input-error"></span>
-        <input
-          required
-          id="link-input"
-          placeholder="Ссылка на картинку"
-          type="url"
-          name="link"
-          className="popup__text popup__text_value_link"
-        />
-        <span className="popup__text-error link-input-error"></span>
-      </PopupWithForm>
+        <PopupWithForm
+          name="edit_profile"
+          title="Редактировать профиль"
+          buttonText="Сохранить"
+          onEditProfile={handleEditProfileClick}
+          isOpen={isEditProfilePopupOpen}
+          onClose={closeAllPopups}
+        >
+          <input
+            required
+            minLength="2"
+            maxLength="40"
+            id="name-input"
+            placeholder="Ваше имя"
+            type="text"
+            name="name"
+            className="popup__text popup__text_value_name"
+          />
+          <span className="popup__text-error name-input-error"></span>
+          <input
+            required
+            minLength="2"
+            maxLength="200"
+            id="job-input"
+            placeholder="Ваша профессия"
+            type="text"
+            name="descr"
+            className="popup__text popup__text_value_descr"
+          />
+          <span className="popup__text-error job-input-error"></span>
+        </PopupWithForm>
 
-      <PopupWithForm
-        name="edit_photo"
-        title="Обновить аватар"
-        buttonText="Сохранить"
-        onEditAvatar={handleEditAvatarClick}
-        isOpen={isEditAvatarPopupOpen}
-        onClose={closeAllPopups}
-      >
-        <input
-          required
-          id="photo-input"
-          placeholder="Ссылка на картинку"
-          type="url"
-          name="link"
-          className="popup__text popup__text_value_link"
+        <PopupWithForm
+          name="edit_cards"
+          title="Новое место"
+          buttonText="Создать"
+          onAddPlace={handleAddPlaceClick}
+          isOpen={isAddPlacePopupOpen}
+          onClose={closeAllPopups}
+        >
+          <input
+            required
+            minLength="2"
+            maxLength="30"
+            id="card-input"
+            placeholder="Название места"
+            type="text"
+            name="name"
+            className="popup__text popup__text_value_title"
+          />
+          <span className="popup__text-error card-input-error"></span>
+          <input
+            required
+            id="link-input"
+            placeholder="Ссылка на картинку"
+            type="url"
+            name="link"
+            className="popup__text popup__text_value_link"
+          />
+          <span className="popup__text-error link-input-error"></span>
+        </PopupWithForm>
+
+        <PopupWithForm
+          name="edit_photo"
+          title="Обновить аватар"
+          buttonText="Сохранить"
+          onEditAvatar={handleEditAvatarClick}
+          isOpen={isEditAvatarPopupOpen}
+          onClose={closeAllPopups}
+        >
+          <input
+            required
+            id="photo-input"
+            placeholder="Ссылка на картинку"
+            type="url"
+            name="link"
+            className="popup__text popup__text_value_link"
+          />
+          <span className="popup__text-error photo-input-error"></span>
+        </PopupWithForm>
+
+        <ImagePopup
+          card={selectedCard}
+          onClose={closeAllPopups}
+          isOpen={isImgPopupOpen}
+          onCardClick={handleCardClick}
         />
-        <span className="popup__text-error photo-input-error"></span>
-      </PopupWithForm>
 
-      <ImagePopup
-        card={selectedCard}
-        onClose={closeAllPopups}
-        isOpen={isImgPopupOpen}
-        onCardClick={handleCardClick}
-      />
-
-      <PopupWithForm
-        name="delete"
-        title="Вы уверены?"
-        buttonText="Да"
-      ></PopupWithForm>
+        <PopupWithForm
+          name="delete"
+          title="Вы уверены?"
+          buttonText="Да"
+        ></PopupWithForm>
+      </div>
     </div>
   );
 }
