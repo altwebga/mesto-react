@@ -1,6 +1,6 @@
 function ImagePopup({ card, isOpen, onClose, onCardClick }) {
   return (
-    <div className={`popup popup_img ${isOpen ? "popup_opened" : null} `}>
+    <div className={`popup popup_img ${isOpen ? 'popup_opened' : null} `}>
       <div className="popup__img-container">
         <img
           className="popup__image"
@@ -8,11 +8,7 @@ function ImagePopup({ card, isOpen, onClose, onCardClick }) {
           alt={card.cardName}
           onClick={onCardClick}
         />
-        <button
-          type="button"
-          className="popup__close"
-          onClick={onClose}
-        ></button>
+        <button type="button" className="popup__close" onClick={onClose} />
         <p className="popup__img-descr">{card.cardName}</p>
       </div>
     </div>
