@@ -5,8 +5,8 @@
 	border-top-right-radius: 10px;
 	-o-object-fit: cover;
 	object-fit: cover;
+	transition: all 0.3s ease-out;
 }
 .card__img:hover {
 	filter: brightness(0.6);
-	transition: all 0.3s ease-out;
 }

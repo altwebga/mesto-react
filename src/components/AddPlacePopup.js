@@ -23,7 +23,7 @@ const AddPlacePopup = ({ isOpen, onClose, onAddPlace }) => {
     <PopupWithForm
       name="edit_cards"
       title="Новое место"
-      buttonText="Создать"
+      buttonText="Добавить"
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
