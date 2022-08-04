@@ -90,11 +90,12 @@ function App() {
           avatar: `${res.avatar}`,
           id: `${res._id}`,
         });
+				closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
       });
-    closeAllPopups();
+   
   }
 
   function handleUpdateAvatar(params) {
@@ -107,11 +108,12 @@ function App() {
           avatar: `${res.avatar}`,
           id: `${res._id}`,
         });
+				closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
       });
-    closeAllPopups();
+   
   }
 
   function handleDeleteCard(card) {
@@ -145,11 +147,12 @@ function App() {
       .postNewCard(card)
       .then((newCard) => {
         setCards([newCard, ...cards]);
+				closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
       });
-    closeAllPopups();
+    
   }
 
   return (

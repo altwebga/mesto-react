@@ -5,11 +5,11 @@ function ImagePopup({ card, isOpen, onClose, onCardClick }) {
         <img
           className="popup__image"
           src={card.link}
-          alt={card.cardName}
+          alt={card.name}
           onClick={onCardClick}
         />
         <button type="button" className="popup__close" onClick={onClose} />
-        <p className="popup__img-descr">{card.cardName}</p>
+        <p className="popup__img-descr">{card.name}</p>
       </div>
     </div>
   );
